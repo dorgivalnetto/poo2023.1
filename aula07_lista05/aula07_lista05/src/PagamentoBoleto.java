@@ -1,38 +1,33 @@
-public class Transacao{
+public class PagamentoBoleto extends Transacao_Heranca{
 
-    //atributos comuns
-    private String descricao;
-    private double valor;
-    private String data;
-
-    //atributos de uma transferência
-    private String contaOrigem;
-    private String contaDestino;
-
-    //atributos de um pagamento de boleto
+    //private String descricao;
+    //private double valor;
+    //private String data;
     private String linhaDigitavel;
     private String dataVencimento;
     private String cedente;
 
-    public void emitirComprovante(){
+    public PagamentoBoleto(String descricao, double valor, String data, String linhaDigitavel, String dataVencimento, String cedente) {
+        super(descricao, valor, data);
+        this.linhaDigitavel = linhaDigitavel;
+        this.dataVencimento = dataVencimento;
+        this.cedente = cedente;
+    }
+
+    public void emitirComprovante() {
+        //super.emitirComprovante();
         System.out.println("Comprovante da transação");
         System.out.println("=================");
         System.out.println("Descrição: " + this.getDescricao());
         System.out.println("Data: " + this.getData());
         System.out.println("Valor: " + this.getValor());
-        
-        if (this.getContaOrigem() != null){
-            System.out.println("Conta de origem: " + this.getContaOrigem());
-            System.out.println("Conta de Destino: " + this.getContaDestino());
-        } else{
-            System.out.println("Linha digitável: " + this.getLinhaDigitavel());
-            System.out.println("Data de vencimento: " + this.getDataVencimento());
-            System.out.println("Cedente: " + this.getCedente());
-        }
-        
+        System.out.println("Linha digitável: " + this.getLinhaDigitavel());
+        System.out.println("Data de vencimento: " + this.getDataVencimento());
+        System.out.println("Cedente: " + this.getCedente());
         System.out.println("=================");
     }
 
+    /*
     public String getDescricao() {
         return descricao;
     }
@@ -56,23 +51,7 @@ public class Transacao{
     public void setData(String data) {
         this.data = data;
     }
-
-    public String getContaOrigem() {
-        return contaOrigem;
-    }
-
-    public void setContaOrigem(String contaOrigem) {
-        this.contaOrigem = contaOrigem;
-    }
-
-    public String getContaDestino() {
-        return contaDestino;
-    }
-
-    public void setContaDestino(String contaDestino) {
-        this.contaDestino = contaDestino;
-    }
-
+     */
     public String getLinhaDigitavel() {
         return linhaDigitavel;
     }
@@ -96,4 +75,5 @@ public class Transacao{
     public void setCedente(String cedente) {
         this.cedente = cedente;
     }
+
 }

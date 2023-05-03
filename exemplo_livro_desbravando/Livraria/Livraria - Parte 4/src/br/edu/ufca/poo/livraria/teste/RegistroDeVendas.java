@@ -1,0 +1,47 @@
+package br.edu.ufca.poo.livraria.teste;
+
+import br.edu.ufca.poo.livraria.Autor;
+import br.edu.ufca.poo.livraria.CarrinhoDeCompras;
+import br.edu.ufca.poo.livraria.produtos.Ebook;
+import br.edu.ufca.poo.livraria.produtos.LivroFisico;
+import br.edu.ufca.poo.livraria.produtos.Produto;
+
+import java.util.List;
+
+public class RegistroDeVendas {
+    public static void main(String[] args) {
+        Autor autor1 = new Autor();
+        autor1.setNome("Maurício Aniche");
+
+        LivroFisico fisico1 = new LivroFisico(autor1);
+        fisico1.setTitulo("Test-Driven Development");
+        fisico1.setValor(59.90);
+
+        Ebook ebook1 = new Ebook(autor1);
+        ebook1.setTitulo("Test-Driven Development");
+        ebook1.setValor(29.90);
+
+        CarrinhoDeCompras carrinho = new CarrinhoDeCompras();
+
+        List<Produto> produtos = carrinho.getProdutos();
+
+        for(Produto produto : produtos){
+            System.out.println(produto);
+        }
+
+        /*
+         * Como o parâmetro recebido no método adiciona
+         * é um Livro, qual método aplicaDesconto foi executado?
+         * 
+         * O método executado sempre será escolhido
+         * em tempo de execução (runtime) e não em compilação
+         * 
+         * A JVM vai localizar o objeto instanciado em memória e chamar o método
+         * aplicaDesconto da sua classe.
+         */
+        carrinho.adiciona(fisico1);
+        carrinho.adiciona(ebook1);
+
+        System.out.println("Total: " + carrinho.getTotal());
+    }
+}
