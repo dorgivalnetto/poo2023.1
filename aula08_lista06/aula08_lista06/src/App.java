@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.edu.ufca.streaming.calculos.CalculadoraDeTempo;
 import br.edu.ufca.streaming.calculos.FiltroRecomendacao;
 import br.edu.ufca.streaming.modelos.Episodio;
@@ -5,8 +7,6 @@ import br.edu.ufca.streaming.modelos.Filme;
 import br.edu.ufca.streaming.modelos.Serie;
 
 public class App {
-
-public class Principal {
     public static void main(String[] args) {
         Filme meuFilme = new Filme();
         meuFilme.setNome("O poderoso chefão");
@@ -52,6 +52,13 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
     }
-}
+
 }
