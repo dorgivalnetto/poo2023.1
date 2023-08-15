@@ -1,15 +1,20 @@
 public class TestaLaco {
     public static void main(String[] args) {
         int contador = 0;
+
         while(contador <= 10){
             System.out.println(contador+=1);
+            System.out.println(contador++);
         }
 
-        System.out.println(contador);
-
+        System.out.println("Aqui "+contador);
+ 
         for (int cont = 0; cont <=10; cont++){
-            System.out.println(cont);
+            System.out.println("Novo " + cont);
         }
+
+
+
 
         for(int multiplicador = 1; multiplicador <=10; multiplicador++){
             for (int conta = 1; conta <=10; conta++){
@@ -18,6 +23,9 @@ public class TestaLaco {
             System.out.println("\n");
         }
 
+
+
+        
         for(int linha = 0; linha<5; linha++){
             for(int coluna = 0; coluna<=linha; coluna++){
                 System.out.print("*");

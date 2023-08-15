@@ -12,9 +12,16 @@ public class TestaCondicional {
             System.out.println("Você pode deduzir até R$636,00");
         }
 
+
+
         int idade = 68;
         boolean ehIdoso = idade >= 65;
         System.out.println(ehIdoso); // Saída: true
+
+
+
+
+
 
         int mesAtual = 0;
 
