@@ -2,7 +2,7 @@ public abstract class Funcionario {
     
     private String nome;
 	private String cpf;
-	protected dble salario;
+	protected double salario;
 	
 	public String getNome() {
 		return nome;
