@@ -31,5 +31,17 @@ public class Serie extends Titulo{
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
 
+    @Override
+    public int getDuracaoEmMinutos(){
+        return temporada 
+        * episodioPorTemporada 
+        * minutosPorEpisodio;
+    }
     
+    @Override
+    public void avalia_novo(double nota) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'avalia_novo'");
+    }
+
 }

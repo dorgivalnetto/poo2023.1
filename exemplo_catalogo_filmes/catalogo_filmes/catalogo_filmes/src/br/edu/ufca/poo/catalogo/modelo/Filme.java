@@ -1,6 +1,8 @@
 package br.edu.ufca.poo.catalogo.modelo;
 
-public class Filme extends Titulo{
+import br.edu.ufca.poo.catalogo.calculos.Classificavel;
+
+public class Filme extends Titulo implements Classificavel{
     private String diretor;
 
     public Filme(){}
@@ -25,6 +27,17 @@ public class Filme extends Titulo{
     @Override
     public String toString() {
         return "Filme [diretor=" + diretor + "]";
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int)(getSomaDasAvaliacoes() / getTotalDeAvalicoes());
+    }
+
+    @Override
+    public void avalia_novo(double nota) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'avalia_novo'");
     }
     
     

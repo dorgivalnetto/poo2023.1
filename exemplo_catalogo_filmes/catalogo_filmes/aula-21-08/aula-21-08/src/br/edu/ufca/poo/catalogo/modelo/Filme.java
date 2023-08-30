@@ -1,65 +1,41 @@
 package br.edu.ufca.poo.catalogo.modelo;
-public class Filme {
-    private String nome;
-    private int anoDeLancamento;
-    private int duracaoEmMinutos;
-    private boolean incluidoNoPlano;
 
-    public Filme(){}
+import br.edu.ufca.poo.catalogo.calculos.Classificavel;
 
-    
-    public Filme(String nome, int anoDeLancamento, int duracaoEmMinutos, boolean incluidoNoPlano) {
-        this.nome = nome;
-        this.anoDeLancamento = anoDeLancamento;
-        this.duracaoEmMinutos = duracaoEmMinutos;
-        this.incluidoNoPlano = incluidoNoPlano;
+public class Filme extends Titulo implements Classificavel{
+    private String diretor;
+
+    public Filme(String nome, int anoDeLancamento, int duracaoEmMinutos, boolean incluidoNoPlano, String diretor) {
+        super(nome, anoDeLancamento, duracaoEmMinutos, incluidoNoPlano);
+        this.diretor = diretor;    
     }
 
-    public void exibeFichaTecnica(){
-        System.out.println("Nome do filme: " + this.nome);;
-        System.out.println("Ano de Lançamento: " + anoDeLancamento);
+    public String getDiretor() {
+        return diretor;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setDiretor(String diretor) {
+        this.diretor = diretor;
     }
 
-    public void setAnoDeLancamento(int anoDeLancamento) {
-        this.anoDeLancamento = anoDeLancamento;
+    @Override
+    public String toString() {
+        return super.toString() + " Filme [diretor=" + diretor + "]";
     }
 
-    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
-        this.duracaoEmMinutos = duracaoEmMinutos;
+    @Override
+    public double getClassificacao() {
+        return getSomaDasAvaliacoes()/getTotalDeAvalicoes();
     }
 
-    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
-        this.incluidoNoPlano = incluidoNoPlano;
+    @Override
+    public void avalia_novo(double nota) {
+        
     }
 
-
-    public String getNome() {
-        return nome;
-    }
-
-
-    public int getAnoDeLancamento() {
-        return anoDeLancamento;
-    }
-
-
-    public int getDuracaoEmMinutos() {
-        return duracaoEmMinutos;
-    }
-
-
-    public boolean isIncluidoNoPlano() {
-        return incluidoNoPlano;
-    }
-
-    public void avalia(double nota){
-    }
-
-    public double mediaDasAvaliacoes(){
-    }
-
+    /*
+     * Titulo [nome=Gran Turismo - De Jogador a Corredor, anoDeLancamento=2023, 
+     * duracaoEmMinutos=135, incluidoNoPlano=true, somaDasAvaliacoes=24.0, 
+     * totalDeAvalicoes=3] Filme [diretor=Fulano de tal]
+     */
 }

@@ -1,6 +1,6 @@
 package br.edu.ufca.poo.catalogo.modelo;
 
-public class Titulo {
+public abstract class Titulo {
     private String nome;
     private int anoDeLancamento;
     private int duracaoEmMinutos;
@@ -23,6 +23,8 @@ public class Titulo {
        System.out.println("Ano de Lançamento " + anoDeLancamento); 
        System.out.println("Duração em minutos " + duracaoEmMinutos);
     }
+
+    public abstract void avalia_novo(double nota);
 
     public void avalia(double nota){
         somaDasAvaliacoes += nota;
