@@ -2,7 +2,8 @@
  * Considerando que, além do nome do aluno, precisamos de outras informações. Vamos criar
  * uma classe e modificamos a classe ListaAlunoNova
  */
-public class Aluno implements Comparable<Aluno>{
+//public class Aluno implements Comparable<Aluno>{
+public class Aluno {
 
     /*
      * A interface Comparable tem apenas um método a ser implementado compareTo()

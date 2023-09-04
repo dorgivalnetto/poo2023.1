@@ -13,19 +13,16 @@ public class ContatoEmail implements Contato {
 		this.email = email;
 	}
 
-	/** @see br.ufes.inf.prog3.lista2.exercicio04.dominio.Contato#getNome() */
 	@Override
 	public String getNome() {
 		return nome;
 	}
 
-	/** @see br.ufes.inf.prog3.lista2.exercicio04.dominio.Contato#getContato() */
 	@Override
 	public String getContato() {
 		return email;
 	}
 	
-	/** @see br.ufes.inf.prog3.lista2.exercicio04.dominio.Contato#getTipo() */
 	@Override
 	public String getTipo() {
 		return "Email";

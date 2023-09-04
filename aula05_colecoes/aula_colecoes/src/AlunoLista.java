@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ListaAluno {
+public class AlunoLista {
     /**
      * @param args
      */
@@ -26,10 +26,11 @@ public class ListaAluno {
         //As implementações de Collections sobrescrevem o método toString()
         System.out.println(lista);
 
-        /*Agora vamos classificar a lista em ordem ascendente. Para o ArrayList não existe
-         *um método de ordenação. Por isso, vamos utilizar a classe Collections
+        /*
+         * Agora vamos classificar a lista em ordem ascendente. Para o ArrayList não existe
+         * um método de ordenação. Por isso, vamos utilizar a classe Collections
         */ 
         Collections.sort(lista);
-        System.out.println(lista);
+        System.out.println("Lista Ordenadada: " + lista);
     }    
 }
