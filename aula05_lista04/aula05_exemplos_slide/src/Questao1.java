@@ -18,6 +18,10 @@ public class Questao1{
             System.out.print( num + " , ");
         }
 
+
+
+
+        
         Set<Integer> conjunto = new HashSet<Integer>();
         
         for(int i = 0; i< numeros.length; i ++){

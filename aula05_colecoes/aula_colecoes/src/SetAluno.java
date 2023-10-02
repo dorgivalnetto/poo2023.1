@@ -25,9 +25,10 @@ public class SetAluno {
         System.out.println(conjunto);
 
         /*
-         * HashSet usa o código hash do objeto, dado pelo método hashCode(). Antes ele verifica
-         * se não existe outro objeto no Set com o mesmo código hash. Se não há código igual,
-         * então o objeto que será inserido não está duplicado.
+         * HashSet usa o código hash do objeto, dado pelo método hashCode(). 
+         * Antes ele verifica se não existe outro objeto no Set com o mesmo
+         * código hash. Se não há código igual, então o objeto que será 
+         * inserido não está duplicado.
          * 
          * Classes que são instâncias de HashSet devem implementar o método hashCode(). 
          * Vamos para a classe Aluno

@@ -52,6 +52,7 @@ public class Aluno {
      * execute o método seja menor, igual ou maior que o objeto passado como parâmetro. Nós
      * podemos definir como a comparação deve ser realizada
      */
+    /*
     @Override
     public int compareTo(Aluno aluno) {
         return this.nome.compareTo(aluno.getNome());
@@ -60,11 +61,13 @@ public class Aluno {
          * objetos de uma classe de terceiros que não é comparável. Nesses casos utilizamos
          * a interface Comparator. Vamos criar a classe ComparaAluno
          */
-    }
+    //} 
 
     /*
-     * HashSet faz uma chamada ao método equals() para verificar se os dois objetos são iguais.
-     * Dois alunos são iguais quando têm nomes iguais, por isso o método equals() retorna
+     * HashSet faz uma chamada ao método equals() para verificar se os dois objetos
+     * são iguais.
+     * Dois alunos são iguais quando têm nomes iguais, por isso o método equals()
+     *  retorna
      * a comparação entre os nomes de dois alunos.
      */
     public boolean equals(Object o){

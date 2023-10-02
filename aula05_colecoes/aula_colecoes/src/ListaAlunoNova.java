@@ -20,7 +20,7 @@ public class ListaAlunoNova {
         O método sort() aceita apenas listas cujos elementos sejam de tipos que implementam
         a interface Comparable. Aluno não implementa Comparable. Vamos corrigir!
         */
-        Collections.sort(lista);
+        //Collections.sort(lista);
         System.out.println(lista);
     }
     

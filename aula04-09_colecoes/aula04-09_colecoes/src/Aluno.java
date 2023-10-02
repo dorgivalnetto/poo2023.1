@@ -47,7 +47,16 @@ public class Aluno implements Comparable<Aluno>{
     @Override
     public int compareTo(Aluno o) {
        return(this.nome.compareTo(o.getNome())); 
+    
     }
 
+    public boolean equals(Object o){
+        Aluno a = (Aluno) o;
+        return this.nome.equals(a.getNome());
+    }
+
+    public int hashCode(){
+        return this.nome.hashCode();
+    }
     
 }
