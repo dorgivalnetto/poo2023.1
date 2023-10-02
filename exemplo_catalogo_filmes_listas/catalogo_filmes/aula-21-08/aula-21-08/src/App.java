@@ -1,13 +1,16 @@
+import java.util.ArrayList;
+
 import br.edu.ufca.poo.catalogo.calculos.CalculadoraDeTempo;
 import br.edu.ufca.poo.catalogo.modelo.Filme;
 import br.edu.ufca.poo.catalogo.modelo.Serie;
-import br.edu.ufca.poo.catalogo.modelo.Titulo;
+
 
 public class App {
     public static void main(String[] args) throws Exception {
         Filme f1 = new Filme("Gran Turismo - De Jogador a Corredor", 2023, 135, true,"Fulano de tal");
         Serie s1 = new Serie("The House of the Dragon", 2022, 45, true, 1, true, 10, 45);
 
+        Filme f2 = new Filme("Super Mario", 2023, 90, true,"Fulano de tal");
 
         f1.avalia(9);
         f1.avalia(7);
@@ -39,10 +42,7 @@ public class App {
 
         /*
         
-        Filme filme1 = new Filme();
-        filme1.setAnoDeLancamento(2023);
-        filme1.setNome("Super Mario");
-        filme1.setDuracaoEmMinutos(90);
+        
         
         Filme filme2 = new Filme("Filme2", 2022, 120, true);
         System.out.println(filme1.getNome());
@@ -57,5 +57,12 @@ public class App {
         filme2.avalia(3);
         filme2.mediaDasAvaliacoes();
          */
+
+         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+         listaDeFilmes.add(f1);
+         listaDeFilmes.add(f2);
+         System.out.println("Tamanho da Lista: " + listaDeFilmes.size());
+         System.out.println("Primeiro Filme: " + listaDeFilmes.get(0).getNome());
+         System.out.println(listaDeFilmes);
     }
 }
